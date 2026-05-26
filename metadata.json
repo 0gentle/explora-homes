@@ -1,0 +1,6 @@
+{
+  "name": "Explorer Homes",
+  "description": "A premium and secure Nigerian real estate investment platform specializing in high-ROI estates, land banking, and verified title properties.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

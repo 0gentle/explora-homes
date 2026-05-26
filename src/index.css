@@ -1,0 +1,78 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-primary: #1B4332; /* Heritage Green */
+  --color-amber-gold: #D4AF37; /* Prestige Gold/Yellow */
+
+  /* Overriding default Tailwind map indices so all legacy blue usages naturally render as Heritage Green scale */
+  --color-blue-50: #F0F6F3; /* Softest green cream */
+  --color-blue-100: #E1EDE7;
+  --color-blue-200: #BED8CD;
+  --color-blue-300: #93BCAB;
+  --color-blue-400: #689E88;
+  --color-blue-500: #428268;
+  --color-blue-600: #336651;
+  --color-blue-700: #274F3F;
+  --color-blue-800: #1C3B2F;
+  --color-blue-900: #1B4332; /* Rich Heritage Green */
+  --color-blue-950: #0C2018; /* Deep Onyx Forest Green */
+
+  /* Enriching amber/gold colors for yellow/gold elements to be highly premium */
+  --color-amber-50: #F9F8F3; /* Soft cream/ivory background */
+  --color-amber-100: #F7EFCF;
+  --color-amber-200: #E9C349; /* Bright Gold */
+  --color-amber-300: #DFC15D;
+  --color-amber-400: #D4AF37; /* Prestige Gold/Yellow Core */
+  --color-amber-500: #D4AF37; /* Consistent golden accent */
+  --color-amber-600: #B29124;
+  --color-amber-700: #8F7215;
+  --color-amber-800: #6B540A;
+  --color-amber-900: #4F3C04;
+  --color-amber-950: #2D2200;
+}
+
+@layer base {
+  body {
+    @apply antialiased select-none text-gray-800 bg-white font-sans;
+  }
+}
+
+/* Custom continuous float animation for legacy badge status indicators */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+/* Custom smooth enter overlays */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
